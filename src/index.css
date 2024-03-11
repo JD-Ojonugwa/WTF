@@ -158,8 +158,9 @@ input:focus {
   border: 0;
   border-radius: 8px;
   color: #fff;
-  width: 100px;
+  min-width: 100px;
   height: 40px;
+  padding-inline: 15px;
   cursor: pointer;
 }
 
@@ -219,6 +220,17 @@ input:focus {
   margin: 10px 0;
 }
 
+.review-card {
+  min-height: 15rem;
+  min-width: 10rem;
+}
+
+.reviewList-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
 @media (max-width: 600px) {
   .rating li {
     margin: 10px 3px;
@@ -234,5 +246,9 @@ input:focus {
 
   .input-group input {
     width: 80%;
+  }
+
+  .reviewList-layout {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

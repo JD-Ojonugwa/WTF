@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import { useState, useContext } from "react"
-import ReviewContext from "../context/ReviewContext"
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import Button from "./layout/Button"
 import Rating from "./Rating"
 
@@ -10,8 +10,8 @@ const spanStyle = {
   marginTop: '10px'
 }
 
-function ReviewForm() {
-  const {AddReview} = useContext(ReviewContext)
+function ReviewForm({handleAdd}) {
+  const navigate = useNavigate()
   
     // state for input text 
   const [text, setText] = useState('')
